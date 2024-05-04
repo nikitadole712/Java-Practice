@@ -1,4 +1,4 @@
-public class AdvCalc extends Calc  //AdvCalc is subclass
+class AdvCalc extends Calc  //AdvCalc is subclass
 {           //we extend the properties of Calc(superclass)
             //his is single level inheritance
         public int mult(int n1, int n2)

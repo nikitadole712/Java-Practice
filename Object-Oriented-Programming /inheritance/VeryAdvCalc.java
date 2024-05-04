@@ -1,4 +1,4 @@
-public class VeryAdvCalc extends AdvCalc    //multilevel inheritance
+class VeryAdvCalc extends AdvCalc    //multilevel inheritance
 { //AdvCalc inherits the prperties og Calc and VeryAdvCalc inherites the properties of AdvCalc
     public double power(int n1, int n2)
     {
