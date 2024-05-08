@@ -20,7 +20,7 @@ public class DownCasting {
         A obj = new B();
         obj.show1();
 
-        B obj1 = (B) obj;
+        B obj1 = (B) obj; //here we are refering new object to existing object. that means we are refering the subclass B.so we are going down
         obj1.show2();
     }
 }
