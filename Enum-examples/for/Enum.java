@@ -8,6 +8,7 @@ public class Enum
     {
         int i = 5;
         Status [] ss = Status.values();
+        System.out.println(i);
 
         for(Status s : ss)      //use to print all values of status
         {
