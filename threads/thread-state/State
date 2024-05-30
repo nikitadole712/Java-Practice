@@ -1,0 +1,49 @@
+
+--------------------           
+|                  | ===> create a new thread then it is in new thread. when we
+|       New        | use start() it goes to the Runnable state 
+-------------------
+        ||
+        || start()
+        \/
+--------------------  ===> when your thread is executing and then waiting for scheduler.  
+|                  |
+|    Runnable      |<===============================================================
+--------------------                                                               ||
+        ||                                                                         ||
+        || run()                                                                   ||
+        \/                                                                         ||
+--------------------                                                               ||
+|                  |===> when the thread is actully running on                     ||
+|     Running      |CPU is running state                                           ||
+--------------------                                                               ||
+        ||                                                                         ||
+        ||                                                                         ||
+        ||                                                                         ||
+        ||                                                                         ||
+        ||==========================================                               ||
+        ||                                        ||                               ||
+        || stop()                                 || sleep()/wait()                ||
+        ||                                        ||                               ||======
+        \/                                        \/                               ||    ||
+-------------------                     --------------------                       \/    ||
+|                 |                     |                  |========================     ||
+|      Dead       |                     |     Waiting      |        notify()             ||
+-------------------                     --------------------                             ||
+        ||                                        ||                                     ||
+        ||                                        ||                                     ||
+        \/                                        \/                                     ||
+if you want to dead thread             when you want to keep hold the running            ||
+then use stop() method                 running state sleep()/wait() is used              ||
+        /\                                                                               ||
+        ||                                                                               ||||                                                                               ||
+        ==================================================================================
+                        stop()                                                           
+
+
+
+
+
+* when the thread is in waiting state then we can comeback using notify() method then that allow thread to go in runnable state then it will wait for schedular and then it goes to running state
+
+* when thread is runnable then we also can stop using stop() method.
